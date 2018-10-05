@@ -1,0 +1,11 @@
+SELECT t1.CATAID, t1.GAMA_NAME, t1.N_SPEC, t1.RA, t1.DEC, t1.WMIN, t1.WMAX, t1.Z, t1.FILENAME,
+       t1.URL, t2.logmstar, t2.dellogmstar, t2.logage, t2.dellogage, t2.metal, t2.delmetal,
+       t3.SN, t3.OIIB_EW, t3.OIIB_EW_ERR, t3.HB_EW, t3.HB_EW_ERR, t3.OIIIB_EW, t3.OIIIB_EW_ERR,
+       t3.HA_EW, t3.HA_EW_ERR
+FROM   SpecObj as t1
+       LEFT OUTER JOIN StellarMasses as t2 on t2.CATAID = t1.CATAID
+       LEFT OUTER JOIN GaussFitSimple as t3 on t3.CATAID = t1.CATAID
+WHERE  t1.Z > 0.1 
+AND    t3.OIIB_EW < 5 
+AND    t3.HA_EW < 5 
+

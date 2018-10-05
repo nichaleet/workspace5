@@ -1,0 +1,5 @@
+catalog cesam_zcosbrightspec20k_dr3_catalog_1536672520.csv is retrieved from http://cesam.lam.fr/zCosmos/search/criteria
+;select all galaxies from z=0.3 (so that 3700A rest frame is included) to z=0.8 (so that 5300 A rest frame is included)
+;redshift quality of 3 to 4 (confident to very confident)
+
+Ilburt13.fits is catalog containing mass measurements from Ilbert et al 2013. SED fitting mass from UltravistaCOSMOS) field.
